@@ -1,21 +1,44 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
+:root{
+    --cor-da-forca: #ffffff;
+}
+
+*{
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;
+    background-color: #87abf8;
+    margin: 0;
+    padding: 0;
     height: 100vh;
+    text-align: center;
+}
+.cabecalho{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    top: 0;
 }
 .container {
-    background-color: #fff;
+    background-color: #63a2e5;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 400px;
-    width: 100%;
+    /* max-width: 400px; */
+    width: 60%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    padding: 20px;
 }
 .estrutura {
     width: 200px;
@@ -27,7 +50,7 @@ body {
 .corda {
     width: 5px;
     height: 60px;
-    background-color: #000000;
+    background-color: var(--cor-da-forca);
     position: absolute;
     top: 20px;
     left: 120px;
@@ -35,7 +58,7 @@ body {
 .viga {
     width: 100px;
     height: 10px;
-    background-color: #000000; 
+    background-color: var(--cor-da-forca); 
     position: absolute;
     top: 20px;
     left: 20px;
@@ -43,7 +66,7 @@ body {
 .suporte {
     width: 10px;
     height: 270px;
-    background-color: black;
+    background-color: var(--cor-da-forca);
     position: absolute;
     top: 20px;
     left: 20px;
@@ -51,7 +74,7 @@ body {
 .base {
     width: 150px;
     height: 10px;
-    background-color: black; 
+    background-color: var(--cor-da-forca); 
     position: absolute;
     top: 280px;
     left: 25px;
@@ -70,29 +93,45 @@ body {
     border: none;
     border-bottom: 2px solid black; 
     outline: none; 
-    width: 31%;
+    width: 24px;
+    text-align: center;
+    background: none;
+    color: #fff;
+    font-size: 24px;
 }
 .letter-buttons {
     position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
+    bottom: 60px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    
 }
 
 .letter-button {
     background-color: #007bff;
     color: #fff;
-    font-size: 16px;
-    width: 30px;
-    height: 30px;
-    border: none;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: solid 3px #255f9d;
+    border-radius: 25%;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .letter-button:hover {
     background-color: #0056b3; /* Azul mais escuro */
+}
+
+.linha{
+    display: flex;
+    gap: 5px;
+}
+
+.linha button{
+   
 }
