@@ -80,12 +80,17 @@ body {
     left: 25px;
 }
 .botao-menu{
+    box-sizing: content-box;
+
     background-color: #63a2e5;
     border-radius: 12%;
     cursor: pointer;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 #cm-jg{
+    
+}
+#config{
     
 }
 .botao-menu:hover{
@@ -146,6 +151,6 @@ body {
     display: flex;
     gap: 5px;
 }
-.rodapé{
+.rodape{
     background-color: #87abf8;
 }
