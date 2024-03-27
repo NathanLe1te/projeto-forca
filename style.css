@@ -79,7 +79,22 @@ body {
     top: 280px;
     left: 25px;
 }
-/*.palavra-adivinhada { SE VIRÁ AI MENO 
+.botao-menu{
+    background-color: #63a2e5;
+    border-radius: 12%;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+#cm-jg{
+    
+}
+.botao-menu:hover{
+    background-color: #0056b3;
+}
+.botao-menu:active{
+    background-color: #87abf8;
+}
+/*.letras-usadas{
     margin-top: 20px;
     text-align: center;
     font-size: 24px;
@@ -109,9 +124,8 @@ body {
     align-items: center;
     
 }
-
-.letter-button {
-    background-color: #007bff;
+.letter-button{
+    background-color: #63a2e5;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -122,16 +136,16 @@ body {
     transition: background-color 0.3s ease;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .letter-button:hover {
-    background-color: #0056b3; /* Azul mais escuro */
+    background-color: #0056b3; 
 }
-
+.letter-button:active{
+    background-color: #87abf8;
+}
 .linha{
     display: flex;
     gap: 5px;
 }
-
-.linha button{
-   
+.rodapé{
+    background-color: #87abf8;
 }
