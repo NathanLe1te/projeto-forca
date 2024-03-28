@@ -156,6 +156,18 @@ body {
 .modal__menu-contato form input::placeholder, textarea::placeholder{
     color: rgba(255, 255, 255, 0.466);
 }
+
+.modal__menu-comoJogar ul{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-size: 1.6em;
+    margin: 3em auto 0;
+    gap: 1em;
+    color: white;
+    text-align: left;
+    list-style: none;
+}
 .container {
     background-color: #63a2e5;
     border-radius: 8px;
@@ -281,6 +293,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
 }
 .letter-button:hover {
     background-color: #0056b3; 
