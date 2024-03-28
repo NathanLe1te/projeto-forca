@@ -10,90 +10,99 @@
 </head>
 <body>
     <header class="cabecalho">
-        <!--<button onclick="document.getElementById('id01').style.display='block'"
-            class="modal-botao">Open Modal</button>
-            <div id="id01" class="modal-botao">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span onclick="document.getElementById('id01').style.display='none'"
-                    class="botao-de-sair">&times;</span>
-                    <p>Algum texto no modal</p>
-                    <p>Algum texto no modal</p>
-                  </div>
-                </div>
-              </div>
-        <button onclick="document.getElementById('id02').style.display='block'"
-            class="modal-botao">Open Modal</button>
-            <div id="id02" class="modal-botao">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span onclick="document.getElementById('id02').style.display='none'"
-                    class="botao-de-sair">&times;</span>
-                    <p>Algum texto no modal</p> 
-                    <p>Algum texto no modal</p> 
-                  </div>  seu mic ta desligado e a 
-                </div> 
-              </div>-->
-        <div class="botao-menu">
-              <button  id="difi">Dificuldade</button>
-              <button  id="cm-jg"><i class="fa-solid fa-question"></i></button>
-            </div>
+        <div>
+              <button class="botao-menu"  id="difi" data-modal="dificuldade"><i class="fa-solid fa-wrench"></i></button>
+              <button class="botao-menu" id="cm-jg" data-modal="como-jogar"><i class="fa-solid fa-question"></i></button>
+        </div>
         <h1>
           FORCA          
         </h1> 
-        <div class="botao-menu">
-            <button  id="cont"><i class="fa-solid fa-user"></i></button>
-            <button  id="config"></button>
+        <div >
+            <button class="botao-menu" id="cont" data-modal="contato"><i class="fa-solid fa-user"></i></button>
+            <button class="botao-menu" id="config" data-modal="configuracoes"><i class="fa-solid fa-gear"></i></button>
         </div>
-        <!--<button onclick="document.getElementById('id03').style.display='block'"
-            class="modal-botao">Open Modal</button>
-            <div id="id03" class="modal-botao">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span onclick="document.getElementById('id03').style.display='none'"
-                    class="botao-de-sair">&times;</span>
-                    <p>Algum texto no modal</p>
-                    <p>Algum texto no modal</p>
-                  </div>
-                </div>
-              </div>
-        <button onclick="document.getElementById('id04').style.display='block'"
-            class="modal-botao">Open Modal</button>
-            <div id="id04" class="modal-botao">
-                <div class="w3-modal-content">
-                  <div class="w3-container">
-                    <span onclick="document.getElementById('id04').style.display='none'"
-                    class="botao-de-sair">&times;</span>
-                    <p>Algum texto no modal</p>
-                    <p>Algum texto no modal</p>
-                  </div>
-                </div>
-              </div>-->
-
 
     </header>
 
-    
-    <div class="container">
-        <h1>Jogo da Forca</h1>
-        <div class="estrutura">
-            <div class="corda"></div>
-            <div class="viga"></div>
-            <div class="suporte"></div>
-            <div class="base"></div>
+    <main>
+      <dialog class="modal__menu modal__menu-dificuldade" id="dificuldade">
+          <div> 
+            <button class="botao-fechar-modal"><i class="fa-solid fa-xmark"></i></button>       
+            <h3>Selecione a dificuldade</h3>
+          </div>
+            <ul>
+            <li>Fácil</li>
+            <li>Médio</li>
+            <li>Dificil</li>
+            <li>Muito dificil</li>
+          </ul>
+      </dialog>
+      
+      <dialog class="modal__menu modal__menu-comoJogar" id="como-jogar">
+        <div> 
+          <button class="botao-fechar-modal"><i class="fa-solid fa-xmark"></i></button>       
+          <h3>Como jogar?</h3>
         </div>
+          <ul>
+          <li>Fácil</li>
+          <li>Médio</li>
+          <li>Dificil</li>
+          <li>Muito dificil</li>
+        </ul>
+    </dialog>
     
-    <div class="letras-da-palavra">
-        <input type="text" class="letter-input" maxlength="1">
-        <input type="text" class="letter-input" maxlength="1">
-        <input type="text" class="letter-input" maxlength="1">
-        <input type="text" class="letter-input" maxlength="1">
-    </div>
+    <dialog class="modal__menu modal__menu-contato" id="contato">
+      <div> 
+        <button class="botao-fechar-modal"><i class="fa-solid fa-xmark"></i></button>       
+        <h3>Entre em contato!</h3>
+      </div>
+      <form action="">
+        <div>
+          <label for="usuario">Insira seu email:</label>
+          <input type="email" name="usuario" placeholder="usuario@email.com">
+        </div>
+        <div>
+          <label for="mensagem">Sua mensagem:</label>
+          <textarea name="mensagem" id="" cols="40" rows="10" placeholder="Envie uma mensagem pra gente!"></textarea>
+        </div>
+        <input type="submit">
+      </form>
+  </dialog>
+  <dialog class="modal__menu modal__menu-config" id="configuracoes">
+      <div> 
+        <button class="botao-fechar-modal"><i class="fa-solid fa-xmark"></i></button>       
+        <h3>Selecione a dificuldade</h3>
+      </div>
+        <ul>
+        <li>Fácil</li>
+        <li>Médio</li>
+        <li>Dificil</li>
+        <li>Muito dificil</li>
+      </ul>
+  </dialog>
+      <div class="container">
+          <h1>Jogo da Forca</h1>
+          <div class="estrutura">
+              <div class="corda"></div>
+              <div class="viga"></div>
+              <div class="suporte"></div>
+              <div class="base"></div>
+          </div>
+      
+        <div class="letras-da-palavra">
+            <input type="text" class="letter-input" maxlength="1" value="X">
+            <input type="text" class="letter-input" maxlength="1" value="A">
+            <input type="text" class="letter-input" maxlength="1" value="M">
+            <input type="text" class="letter-input" maxlength="1" value="P">
+            <input type="text" class="letter-input" maxlength="1" value="P">
+            
+        </div>
         <div class="letras-usadas" id="letras-usadas"></div>
-        
+          
         <div class="letras-erradas" id="letras-erradas"></div>
-    
-        <div class="letter-buttons">
+      
+      </div>
+      <div class="letter-buttons">
             <div class="linha">
                 <button class="letter-button">Q</button>
                 <button class="letter-button">W</button>
@@ -116,6 +125,7 @@
                 <button class="letter-button">J</button>
                 <button class="letter-button">K</button>
                 <button class="letter-button">L</button>
+                <button class="letter-button"><i class="fa-solid fa-arrow-left-long"></i></button>
             </div>
             <div class="linha">
                 <button class="letter-button">Z</button>
@@ -125,16 +135,15 @@
                 <button class="letter-button">B</button>
                 <button class="letter-button">N</button>
                 <button class="letter-button">M</button>
+                <button class="letter-button">ENTER</button>
             </div>
         </div>
-    </div>
+    </main>
     <footer class="rodape">
         <p>Criado por: Nathan e Nick </p>
         <p>NN INDs© 2024 - Todos os direitos reservados</p>
     </footer>
-    <script>
-        // Aqui você pode adicionar scripts JavaScript para controlar a lógica do jogo
-        </script>
+    <script src="./app/main.js"></script>
 </body>
 
 </html>
